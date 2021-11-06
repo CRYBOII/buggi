@@ -24,22 +24,22 @@ func init() {
 
 var quit chan struct{}
 
-func main() {
-	ticker := time.NewTicker(2 * time.Second)
-	quit = make(chan struct{})
-	go func() {
-		for {
-			select {
-			case <-ticker.C:
-				heartbeatCheckingTest()
-			case <-quit:
-				ticker.Stop()
-				return
-			}
-		}
-	}()
-	<-quit
-}
+// func main() {
+// 	ticker := time.NewTicker(2 * time.Second)
+// 	quit = make(chan struct{})
+// 	go func() {
+// 		for {
+// 			select {
+// 			case <-ticker.C:
+// 				heartbeatCheckingTest()
+// 			case <-quit:
+// 				ticker.Stop()
+// 				return
+// 			}
+// 		}
+// 	}()
+// 	<-quit
+// }
 
 func SimpleRun(delay int) {
 
