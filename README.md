@@ -1,5 +1,10 @@
 ## Buggi - simple golang anti debugger & anti http debugging 
 
+<p align="center">
+	<img src="buggi.png" alt="kill"/>
+</p>
+
+
  A simple golang package that will make a crackers feel more harder to reverse engineering your program, (for window os)
 
 ___
