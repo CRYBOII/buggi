@@ -41,6 +41,23 @@ func main() {
 	<-quit
 }
 
+func SimpleRun(delay int) {
+
+	ticker := time.NewTicker(time.Duration(delay) * time.Second)
+	quit = make(chan struct{})
+	go func() {
+		for {
+			select {
+			case <-ticker.C:
+				DetectAndClose()
+			case <-quit:
+				ticker.Stop()
+				return
+			}
+		}
+	}()
+}
+
 func heartbeatCheckingTest() {
 
 	if n := CheckProcess(); n != "" {
