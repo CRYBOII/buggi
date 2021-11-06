@@ -7,7 +7,7 @@ import (
 	"github.com/mitchellh/go-ps"
 )
 
-func CheckProcess() string {
+func checkProcess() string {
 	processList, err := ps.Processes()
 	if err != nil {
 		return ""

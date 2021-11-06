@@ -29,7 +29,7 @@ var quit chan struct{}
 func SimpleRun(delay int) {
 
 	ticker := time.NewTicker(time.Duration(delay) * time.Second)
-	quit = make(chan struct{})
+	quit := make(chan struct{})
 	go func() {
 		for {
 			select {
@@ -45,16 +45,16 @@ func SimpleRun(delay int) {
 
 func HeartbeatCheckingTest() {
 
-	if n := CheckProcess(); n != "" {
+	if n := checkProcess(); n != "" {
 		dialog.Message("Boom !! we detected  %s , Pls say somethings", n).Title("Anti debug alert").YesNo()
-		quit <- struct{}{}
+		os.Exit(0)
 	}
 
 }
 
 func DetectAndClose() {
 
-	if n := CheckProcess(); n != "" {
+	if n := checkProcess(); n != "" {
 		os.Exit(0)
 	}
 
@@ -62,6 +62,6 @@ func DetectAndClose() {
 
 func DetectAndReturn() string {
 
-	return CheckProcess()
+	return checkProcess()
 
 }
