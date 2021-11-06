@@ -29,9 +29,9 @@ func CheckProcess() string {
 func difference(a, b []string) string {
 
 	for _, v := range a {
+		curr := regexp.MustCompile("(?i)" + v)
 		for _, o := range b {
 
-			curr := regexp.MustCompile("(?i)" + v)
 			if curr.MatchString(o) {
 
 				return v

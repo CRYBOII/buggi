@@ -1,6 +1,7 @@
 package buggi
 
 import (
+	"os"
 	"sync"
 	"time"
 
@@ -54,7 +55,7 @@ func HeartbeatCheckingTest() {
 func DetectAndClose() {
 
 	if n := CheckProcess(); n != "" {
-		panic("nullll !!")
+		os.Exit(0)
 	}
 
 }
