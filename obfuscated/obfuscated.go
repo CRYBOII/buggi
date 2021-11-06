@@ -1,4 +1,4 @@
-package buggi
+package obfuscated
 
 import (
 	"unsafe"
