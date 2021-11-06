@@ -86,4 +86,4 @@ buggi
 ![antidebug](uTln8gs.gif "antidebug")
 
 ## NOTE !!
-`anyways this method can be bypass by change a debugger program name `
+`anyways this method can be bypass by change a debugger program executable name `
