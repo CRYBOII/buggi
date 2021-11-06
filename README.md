@@ -27,7 +27,7 @@ go get github.com/CRYBOII/buggi
 ```
 
 ## USAGE
-
+#### DetectAndClose - close program immediately when detected debugger
 ```
 package main
 
