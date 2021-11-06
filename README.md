@@ -27,6 +27,27 @@ go get github.com/CRYBOII/buggi
 ```
 
 ## USAGE
+
+#### SimpleRun - simply implement this function will close program immediately when detected debugger
+
+```
+package main
+
+import (
+	"github.com/CRYBOII/buggi"
+
+	"bufio"
+	"os"
+)
+
+func main() {
+       // Interval every 2 second
+	buggi.SimpleRun(2)
+	input := bufio.NewScanner(os.Stdin)
+	input.Scan()
+}
+
+```
 #### DetectAndClose - close program immediately when detected debugger
 ```
 package main
