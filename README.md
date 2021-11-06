@@ -77,3 +77,8 @@ and try to open some debugger program for testing
 ```
 buggi
 ```
+
+![antidebug](uTln8gs.gif "antidebug")
+
+## NOTE !!
+`anyways this method can be bypass by change a debugger program name `
