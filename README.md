@@ -95,6 +95,7 @@ fmt.Printlh(debugger)
 # RUN TEST
 
 when package are intstalled you can create a dummy test project
+`main.go`
 ```
 package main
 
