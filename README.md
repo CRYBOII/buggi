@@ -94,15 +94,46 @@ fmt.Printlh(debugger)
 
 # RUN TEST
 
-when package are intstalled you can run this command,
-and try to open some debugger program for testing
+when package are intstalled you can create a dummy test project
+```
+package main
+
+import (
+	"time"
+
+	"github.com/CRYBOII/buggi"
+)
+
+func main() {
+	ticker := time.NewTicker(2 * time.Second)
+	quit := make(chan struct{})
+	go func() {
+		for {
+			select {
+			case <-ticker.C:
+				buggi.HeartbeatCheckingTest()
+			case <-quit:
+				ticker.Stop()
+				return
+			}
+		}
+	}()
+	<-quit
+}
+
+```
+```
+go run main.go
+```
+
+then you can try to open some debugger tools
+
+
 
 #### List of debugger that can be detect
 `BurpSuite,BurpSuiteFree,Charles,dumpcap,Fiddler,httpsMon,httpwatchstudiox64,mitmdump,mitmweb,NetworkMiner,Proxifier,rpcapd,smsniff,tshark,WinDump,Wireshark,WSockExpert,x96dbg,ollydbg,ida64,idag,idag64,idaw,idaw64,idaq,idaq64,idau,idau64,scylla_x64,scylla_x86,protection_id,windbg,reshacker,ImportREC,IMMUNITYDEBUGGER,HTTPDebuggerUI,HTTPDebuggerSvc,Debugger,OLLYDBG,ida,disassembly,scylla,Debug,CPU,Immunity,WinDbg,x32dbg,x64dbg,reconstructor,MegaDumper`
 
-```
-buggi
-```
+
 
 ![antidebug](uTln8gs.gif "antidebug")
 
