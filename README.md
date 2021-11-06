@@ -1,4 +1,4 @@
-### Buggi - simple golang anti debugger & anti http debugging 
+## Buggi - simple golang anti debugger & anti http debugging 
 
  A simple golang package that will make a crackers feel more harder to reverse engineering your program, (for window os)
 
