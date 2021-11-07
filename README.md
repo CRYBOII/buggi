@@ -28,7 +28,7 @@ go get github.com/CRYBOII/buggi
 
 ## USAGE
 
-#### SimpleRun - simply implement this function will close program immediately when detected debugger
+#### SimpleRun - simply implement this function will close program immediately  when debuggers are detected 
 
 ```
 package main
@@ -48,7 +48,7 @@ func main() {
 }
 
 ```
-#### DetectAndClose - close program immediately when detected debugger
+#### DetectAndClose - close program immediately when debuggers are detected 
 ```
 package main
 
